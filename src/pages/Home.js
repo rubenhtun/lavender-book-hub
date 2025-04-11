@@ -21,6 +21,7 @@ const Home = () => {
         if (!response.ok) throw new Error("Failed to fetch books");
         const data = await response.json();
         setBooks(data.docs || []); // Set books from API, default to empty array if no results
+        console.log(data.docs);
       } catch (error) {
         console.error("Error fetching books:", error);
         setBooks([]);
@@ -83,12 +84,7 @@ const Home = () => {
                 <h3>{book.title}</h3>
                 <p>Author: {book.author_name?.join(", ") || "Unknown"}</p>
                 <p>Year: {book.first_publish_year || "N/A"}</p>
-                <Link
-                  to={`/books/${book.key.split("/").pop()}`} // Extract work ID
-                  className="book-link"
-                >
-                  Learn More
-                </Link>
+                <p>TotalEditions: {book.edition_count}</p>
               </div>
             ))}
           </div>

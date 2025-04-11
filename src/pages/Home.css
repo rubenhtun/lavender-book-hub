@@ -1,139 +1,257 @@
+/* Home.css */
+
+/* General home page styling */
+.home {
+  background: linear-gradient(
+    180deg,
+    #c0c0c0,
+    #e6e6fa
+  ); /* Silver to lavender gradient */
+  min-height: 100vh;
+  padding: 20px;
+
+  font-family: "Verdana", sans-serif;
+  color: #333;
+}
+
+/* Hero/Banner Section */
 .hero {
-  min-height: 60vh;
-  background-image: url(/src/assets/images/lavender-book-library-hero-banner.png);
-  background-position: center;
-  background-size: cover; /* Ensure the image covers the section */
-  background-repeat: no-repeat; /* Prevent tiling */
-  background-color: #e6d9f2; /* Fallback lavender color if image fails to load */
-  padding: 60px 20px;
   text-align: center;
-  color: #4a2c5e; /* Deep lavender text */
-  position: relative;
-  overflow: hidden;
+  padding: 30px 20px;
+  background: #ffa500; /* Bright orange */
+  border: 3px outset #00ced1; /* Teal border */
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* Optional overlay for better text contrast */
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(107, 78, 113, 0.3); /* Semi-transparent lavender overlay */
-  z-index: 0;
+.hero h1 {
+  font-family: "Comic Sans MS", "Arial", sans-serif;
+  font-size: clamp(24px, 6vw, 36px);
+  color: #ff4500; /* Orange-red */
+  text-shadow: 2px 2px 4px #00ff00; /* Lime green shadow */
+  margin: 0 0 10px;
 }
 
-/* Ensure content is above the overlay */
-.hero h1,
-.hero p,
-.hero .search-form,
-.hero .cta-button {
-  position: relative;
-  z-index: 1;
+.hero p {
+  font-size: 18px;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px #ff00ff; /* Magenta shadow */
+  margin: 0 0 20px;
 }
 
-/* Search Form */
 .search-form {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 10px;
-  margin: 20px 0;
-  position: relative;
-  z-index: 1;
+  margin-bottom: 20px;
 }
 
 .search-input {
-  padding: 12px 20px;
-  width: 350px;
-  max-width: 100%;
-  font-size: 1rem;
-  border: 2px solid #8a5a94; /* Lavender border */
-  border-radius: 25px; /* Pill-shaped */
-  background-color: #fff;
-  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05); /* Inner shadow */
-  outline: none;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.search-input:focus {
-  border-color: #6b4e71; /* Darker lavender on focus */
-  box-shadow: 0 0 8px rgba(107, 78, 113, 0.5); /* Glow effect */
+  padding: 8px;
+  font-size: 16px;
+  font-family: "Courier New", monospace;
+  background: #ffffff;
+  border: 2px outset #00ff00; /* Lime green border */
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+  color: #333;
 }
 
 .search-button {
-  padding: 12px 25px;
-  font-size: 1rem;
-  background-color: #6b4e71; /* Rich lavender */
-  color: white;
-  border: none;
-  border-radius: 25px; /* Pill-shaped */
+  padding: 8px 16px;
+  font-size: 16px;
+  font-family: "Verdana", sans-serif;
+  background: #1e90ff; /* Dodger blue */
+  color: #ffffff;
+  border: 2px outset #00ff00; /* Lime green border */
+  border-radius: 5px;
+  text-shadow: 1px 1px 2px #ff4500; /* Orange shadow */
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .search-button:hover {
-  background-color: #8a5a94; /* Lighter lavender */
-  transform: scale(1.05); /* Slight scale-up effect */
+  background: #00ced1; /* Teal */
+  border-style: inset;
 }
 
-.search-button:active {
-  transform: scale(0.98); /* Slight press effect */
-}
-
-/* CTA Button */
 .cta-button {
   display: inline-block;
-  padding: 14px 30px;
-  font-size: 1.1rem;
-  background-color: #b58ed9; /* Light lavender */
-  color: #fff;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-family: "Comic Sans MS", "Arial", sans-serif;
+  background: #ff69b4; /* Hot pink */
+  color: #ffffff;
   text-decoration: none;
-  border-radius: 30px; /* Rounded button */
-  margin-top: 20px;
-  position: relative;
-  z-index: 1;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  border: 2px outset #ffd700; /* Gold border */
+  border-radius: 5px;
+  text-shadow: 1px 1px 2px #000000;
+  transition: all 0.2s ease;
 }
 
 .cta-button:hover {
-  background-color: #d3b8e3; /* Even lighter lavender */
-  box-shadow: 0 4px 15px rgba(181, 142, 217, 0.5); /* Glow effect */
+  background: #00ced1; /* Teal */
+  border-style: inset;
 }
 
-/* Responsive Adjustments */
+/* Featured Books Section */
+.featured-books {
+  padding: 20px;
+  background: #ff00ff; /* Magenta */
+  border: 3px outset #00ff00; /* Lime green border */
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.featured-books h2 {
+  font-family: "Comic Sans MS", "Arial", sans-serif;
+  font-size: 24px;
+  color: #00ff00; /* Lime green */
+  text-shadow: 2px 2px 4px #ff4500; /* Orange shadow */
+  margin: 0 0 15px;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.book-card {
+  background: #ffffff;
+  padding: 15px;
+  border: 2px outset #1e90ff; /* Dodger blue border */
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.book-image {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #ffd700; /* Gold frame */
+  margin-bottom: 10px;
+}
+
+.book-card h3 {
+  font-size: 18px;
+  color: #ff4500; /* Orange-red */
+  margin: 0 0 5px;
+}
+
+.book-card p {
+  font-size: 14px;
+  color: #333;
+  margin: 5px 0;
+}
+
+.book-link {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 14px;
+  background: #00ced1; /* Teal */
+  color: #ffffff;
+  text-decoration: none;
+  border: 2px outset #ff69b4; /* Hot pink border */
+  border-radius: 5px;
+  text-shadow: 1px 1px 1px #000000;
+  transition: all 0.2s ease;
+}
+
+.book-link:hover {
+  background: #1e90ff; /* Dodger blue */
+  border-style: inset;
+}
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+  padding: 30px 20px;
+  background: #800080; /* Purple */
+  border: 3px outset #ffd700; /* Gold border */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.cta-section h2 {
+  font-family: "Comic Sans MS", "Arial", sans-serif;
+  font-size: 24px;
+  color: #ffd700; /* Gold */
+  text-shadow: 2px 2px 4px #ff00ff; /* Magenta shadow */
+  margin: 0 0 10px;
+}
+
+.cta-section p {
+  font-size: 16px;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px #00ff00; /* Lime green shadow */
+  margin: 0 0 20px;
+}
+
+.cta-button.secondary {
+  background: #00ff00; /* Lime green */
+  border: 2px outset #ff4500; /* Orange-red border */
+}
+
+.cta-button.secondary:hover {
+  background: #ff69b4; /* Hot pink */
+  border-style: inset;
+}
+
+/* Loading and No Results */
+.featured-books p {
+  font-size: 16px;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px #000000;
+  text-align: center;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .hero {
-    padding: 40px 15px;
+  .search-form {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .hero h1 {
-    font-size: 2rem;
+  .search-input,
+  .search-button {
+    width: 100%;
+    max-width: 250px;
   }
 
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .search-input {
-    width: 250px;
-  }
-
-  .search-button,
-  .cta-button {
-    padding: 10px 20px;
-    font-size: 0.9rem;
+  .books-grid {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 480px) {
-  .search-form {
-    flex-direction: column;
-    gap: 15px;
+  .hero h1,
+  .featured-books h2,
+  .cta-section h2 {
+    font-size: 20px;
   }
 
-  .search-input {
-    width: 100%;
+  .hero p,
+  .cta-section p {
+    font-size: 14px;
+  }
+
+  .search-input,
+  .search-button,
+  .cta-button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+  
+  .book-card h3 {
+    font-size: 16px;
+  }
+
+  .book-card p,
+  .book-link {
+    font-size: 12px;
   }
 }
