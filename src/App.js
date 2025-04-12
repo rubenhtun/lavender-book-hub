@@ -13,7 +13,7 @@ const App = () => {
     <Router>
       <div className="app-wrapper">
         <Header />
-        {/* <main>
+        <main>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/books" element={<Books />} />
@@ -21,7 +21,7 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </main> */}
+        </main>
         {/* <Footer /> */}
       </div>
     </Router>

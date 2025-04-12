@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBookOpen, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faBookOpen } from "@fortawesome/free-solid-svg-icons";
 import "./Header.css";
 
 const Header = () => {
@@ -17,10 +17,15 @@ const Header = () => {
           <div className="logo-container">
             <img
               className="logo-image"
-              src="lavender-flower.png"
+              src="/assets/images/lavender.png"
               alt="Lavender Logo"
             />
-            <h1 className="logo-text">.Lavender</h1>
+            <h1 className="logo-text">
+              Laven
+              <span style={{ backgroundColor: "#5924ed", color: "#fff" }}>
+                der
+              </span>
+            </h1>
           </div>
         </NavLink>
 
