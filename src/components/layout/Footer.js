@@ -20,13 +20,8 @@ const Footer = () => {
         {/* Right Section: Get In Touch */}
         <div className="get-in-touch">
           <Link to="/contact">
-            <h4>
-              GET IN TOUCH{" "}
-              <FontAwesomeIcon
-                icon={faArrowUp}
-                className="get-in-touch-arrow"
-              />
-            </h4>
+            <h4 data-text="GET IN TOUCH">GET IN TOUCH</h4>
+            <FontAwesomeIcon icon={faArrowUp} className="get-in-touch-arrow" />
           </Link>
         </div>
       </div>
