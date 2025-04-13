@@ -80,6 +80,42 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Featured Books Section */}
+      <section className="featured-books">
+        <h2>{searchTerm ? "Search Results" : "Featured Books"}</h2>
+        {loading ? (
+          <p>Loading books...</p>
+        ) : books.length > 0 ? (
+          <div className="books-grid">
+            {books.map((book) => (
+              <div className="book-card-wrapper" key={book.key}>
+                <div className="book-card">
+                  <div className="book-cover">
+                    <img
+                      src={`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`}
+                      alt={book.title}
+                      className="book-image"
+                    />
+                  </div>
+                  <div className="book-info">
+                    <h3>
+                      {book.title.length > 20
+                        ? `${book.title.slice(0, 20)}...`
+                        : book.title}
+                    </h3>
+                    <p>Author: {book.author_name?.[0] || "Unknown"}</p>
+                    <p>Total Editions: {book.edition_count}</p>
+                    <p>Year: {book.first_publish_year || "N/A"}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <p>No books found. Try a different search!</p>
+        )}
+      </section>
     </div>
   );
 };

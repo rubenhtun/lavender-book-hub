@@ -16,7 +16,6 @@ const Books = () => {
         const response = await fetch(openLibraryApiUrl);
         if (!response.ok) throw new Error("Failed to fetch books");
         const data = await response.json();
-        console.log(data.reading_log_entries);
         setBooks(data.reading_log_entries || []); // Use empty array if no entries
       } catch (error) {
         console.error("Error fetching books:", error);
