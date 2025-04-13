@@ -11,6 +11,7 @@
 body {
   font-family: "Poppins", sans-serif; /* Primary font */
   line-height: 1.6;
+  background-color: #eeebfa;
   color: #333;
 }
 
@@ -22,7 +23,6 @@ body {
 
 main {
   flex: 1;
-  padding: 2rem;
 }
 
 /* Optional: Use Padauk for headings */

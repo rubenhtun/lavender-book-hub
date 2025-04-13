@@ -21,6 +21,7 @@ const Home = () => {
         if (!response.ok) throw new Error("Failed to fetch books");
         const data = await response.json();
         setBooks(data.docs || []); // Set books from API, default to empty array if no results
+        console.log(data.docs);
       } catch (error) {
         console.error("Error fetching books:", error);
         setBooks([]);
@@ -37,29 +38,47 @@ const Home = () => {
   };
 
   return (
-    <div className="home">
-      {/* Hero/Banner Section with Search Form */}
-      <section className="hero">
-        <h1>Welcome to Lavender Book Hub</h1>
-        <p>Your cozy corner for discovering amazing books.</p>
-        <div className="search-form">
-          <input
-            type="text"
-            value={searchTerm}
-            onChange={handleSearch}
-            placeholder="Search for a book title..."
-            className="search-input"
-          />
-          <button
-            onClick={() => setSearchTerm(searchTerm)}
-            className="search-button"
-          >
-            Search
-          </button>
+    <div className="home-page">
+      {/* Hero/Banner Section */}
+      <section className="hero-section">
+        <div className="hero-content">
+          <div className="hero-text">
+            <h1 className="hero-title">Dive into the World of Lavender</h1>
+
+            <p className="hero-subtitle">
+              Your cozy corner for discovering amazing books. Find your next
+              great read today!
+            </p>
+
+            <div className="search-bar">
+              <input
+                type="text"
+                value={searchTerm}
+                onChange={handleSearch}
+                placeholder="Search for a book title..."
+                className="search-input"
+              />
+              <button
+                onClick={() => setSearchTerm(searchTerm)}
+                className="search-button"
+              >
+                Search
+              </button>
+            </div>
+
+            <Link to="/books" className="cta-button">
+              Explore Books
+            </Link>
+          </div>
+
+          <div className="hero-image-wrapper">
+            <img
+              className="hero-image"
+              src="/assets/images/lavender-book-library-hero-banner.png"
+              alt="Lavender Book Hub Banner"
+            />
+          </div>
         </div>
-        <Link to="/books" className="cta-button">
-          Explore Books
-        </Link>
       </section>
 
       {/* Featured Books Section */}
@@ -69,41 +88,33 @@ const Home = () => {
           <p>Loading books...</p>
         ) : books.length > 0 ? (
           <div className="books-grid">
-            {books.slice(0, 3).map((book, index) => (
-              <div className="book-card" key={book.key || index}>
-                <img
-                  src={
-                    book.cover_i
-                      ? `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`
-                      : "/assets/images/default-book.jpg" // Fallback image
-                  }
-                  alt={book.title}
-                  className="book-image"
-                />
-                <h3>{book.title}</h3>
-                <p>Author: {book.author_name?.join(", ") || "Unknown"}</p>
-                <p>Year: {book.first_publish_year || "N/A"}</p>
-                <Link
-                  to={`/books/${book.key.split("/").pop()}`} // Extract work ID
-                  className="book-link"
-                >
-                  Learn More
-                </Link>
+            {books.map((book) => (
+              <div className="book-card-wrapper" key={book.key}>
+                <div className="book-card">
+                  <div className="book-cover">
+                    <img
+                      src={`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`}
+                      alt={book.title}
+                      className="book-image"
+                    />
+                  </div>
+                  <div className="book-info">
+                    <h3>
+                      {book.title.length > 20
+                        ? `${book.title.slice(0, 20)}...`
+                        : book.title}
+                    </h3>
+                    <p>Author: {book.author_name?.[0] || "Unknown"}</p>
+                    <p>Total Editions: {book.edition_count}</p>
+                    <p>Year: {book.first_publish_year || "N/A"}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
         ) : (
           <p>No books found. Try a different search!</p>
         )}
-      </section>
-
-      {/* CTA Section */}
-      <section className="cta-section">
-        <h2>Join Our Community</h2>
-        <p>Sign up for updates, book recommendations, and more!</p>
-        <Link to="/contact" className="cta-button secondary">
-          Get Started
-        </Link>
       </section>
     </div>
   );
