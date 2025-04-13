@@ -1,0 +1,88 @@
+:root {
+  --light-bg-color: #eae4ff;
+  --hover-bg-color: #f3fcbe;
+  --text-color-dark: #333;
+  --text-color-light: #444;
+}
+
+/* Library Books Section */
+.library-container {
+  max-width: 1100px;
+  min-height: 70vh;
+  margin: 2rem auto;
+  padding: 2rem;
+  font-family: "Courier New", monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 5px solid #ccc;
+  border-top: 5px solid #5924ed;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 2rem auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.book-card-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.book-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  height: 180px;
+  padding: 1rem;
+  background-color: var(--light-bg-color);
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.book-card:hover {
+  background-color: var(--hover-bg-color);
+}
+
+.book-cover {
+  flex-shrink: 0;
+}
+
+.book-image {
+  width: 90px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.book-info {
+  flex: 1;
+}
+
+.book-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  color: var(--text-color-dark);
+}
+
+.book-card p {
+  margin: 0.25rem 0;
+  font-size: 0.8rem;
+  color: var(--text-color-light);
+}
