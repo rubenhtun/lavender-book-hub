@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
-const openLibraryApiUrl = "http://openlibrary.org/search.json?title=";
-
 const Home = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(false);
+
+  // Define the API URL
+  const openLibraryApiUrl = "http://openlibrary.org/search.json?title=";
 
   // Fetch books when searchTerm changes
   useEffect(() => {

@@ -1,3 +1,4 @@
+/* Contact Container */
 .contact-container {
   max-width: 1100px;
   min-height: 60vh;
@@ -10,12 +11,14 @@
   flex-wrap: wrap;
 }
 
+/* Contact Image Wrapper */
 .contact-image-wrapper {
   flex: 1;
   display: flex;
   justify-content: center;
 }
 
+/* Contact Image Styling */
 .contact-image {
   width: 300px;
   height: 250px;
@@ -26,10 +29,12 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
+/* Contact Content Section */
 .contact-content {
   flex: 2;
 }
 
+/* Contact Title */
 .contact-title {
   font-size: 3.5rem;
   text-transform: uppercase;
@@ -37,12 +42,14 @@
   color: var(--primary-color);
 }
 
+/* Contact Description */
 .contact-description {
   font-size: 1.2rem;
   color: var(--text-muted);
   line-height: 1.6;
 }
 
+/* Contact Media Links Wrapper */
 .contact-media {
   display: flex;
   flex-wrap: wrap;
@@ -50,6 +57,7 @@
   margin-top: 2rem;
 }
 
+/* Contact Item Button Style */
 .contact-item {
   transition: all 0.3s ease;
   border: 1px solid var(--border-color);
@@ -66,6 +74,7 @@
   overflow: hidden;
 }
 
+/* Contact Item Text Animation */
 .contact-item h4 {
   font-family: var(--font-family);
   font-size: 1rem;
@@ -104,10 +113,13 @@
   top: -100%;
 }
 
+/* Contact Arrow Icon */
 .contact-arrow {
   transform: rotate(45deg);
+  color: var(--text-muted);
 }
 
+/* Contact Item Hover Border Color */
 .contact-item:hover {
   border-color: var(--hover-border-color);
 }

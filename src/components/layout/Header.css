@@ -1,3 +1,4 @@
+/* Root Variables */
 :root {
   --primary-color: #5924ed;
   --text-color: #333;
@@ -5,7 +6,7 @@
   --modal-opacity: 0.9;
 }
 
-
+/* Header */
 .header {
   position: sticky;
   top: 0;
@@ -16,10 +17,12 @@
   animation: slideIn 0.5s ease-out forwards;
 }
 
+/* Header on Scroll */
 .header.scrolled {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Header Container */
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -29,6 +32,7 @@
   padding: 0 2rem;
 }
 
+/* Logo */
 .logo-link {
   text-decoration: none;
   gap: 0.5rem;
@@ -52,6 +56,7 @@
   color: var(--text-color);
 }
 
+/* Book Hub */
 .book-hub {
   display: flex;
   align-items: center;
@@ -73,6 +78,7 @@
   margin: 0;
 }
 
+/* Menu Icon */
 .menu-bar {
   width: 30px;
   height: 20px;
@@ -93,6 +99,7 @@
   background: var(--primary-color);
 }
 
+/* Modal Navigation */
 .modal-nav {
   position: fixed;
   inset: 0;
@@ -107,6 +114,7 @@
   animation: fadeIn 0.3s ease-in-out;
 }
 
+/* Modal Links */
 .modal-nav-links {
   font-family: "Courier New", monospace;
   list-style: none;
@@ -130,6 +138,7 @@
   color: var(--primary-color);
 }
 
+/* Close Button */
 .close-btn {
   border: none;
   background: none;
@@ -144,7 +153,7 @@
   opacity: 0.6;
 }
 
-/* Responsive Styles */
+/* Responsive Design */
 @media (max-width: 768px) {
   .book-hub {
     display: none;
