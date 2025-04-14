@@ -1,0 +1,111 @@
+/* About Section Styles */
+.about-section {
+  max-width: 1100px;
+  min-height: 85vh;
+  margin: 2rem auto;
+  padding: 2rem;
+  font-family: "Courier New", monospace;
+  color: var(--text-color-dark);
+}
+
+.lavender-book-hub {
+  width: 100%;
+  min-height: 400px;
+  position: relative;
+}
+
+.lavender-book-hub img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 650px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.about-details {
+  z-index: -1;
+  position: absolute;
+  top: 87%;
+  left: 30%;
+  padding: 4rem 2rem 3rem 2rem;
+  background-color: var(--accent-color);
+  color: var(--text-color-dark);
+}
+
+/* Cards Section Styles */
+.about-cards {
+  max-width: 1100px;
+  margin: 2rem auto;
+  font-family: "Courier New", monospace;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+}
+
+.card {
+  flex: 1;
+  min-width: 280px;
+  max-width: 450px;
+  padding: 1.5rem;
+  background-color: #bcf2cf;
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.card:hover {
+  background-color: var(--hover-bg-color);
+}
+
+.card img {
+  position: absolute;
+  left: 0;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  background-color: var(--light-bg-color);
+  object-fit: contain;
+}
+
+.card > div {
+  margin-left: 40px;
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-color-light);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .lavender-book-hub img {
+    width: 100%;
+  }
+
+  .about-details {
+    top: 105%;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .about-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
