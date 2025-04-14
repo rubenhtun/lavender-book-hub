@@ -116,7 +116,6 @@
 /* Contact Arrow Icon */
 .contact-arrow {
   transform: rotate(45deg);
-  color: var(--text-muted);
 }
 
 /* Contact Item Hover Border Color */

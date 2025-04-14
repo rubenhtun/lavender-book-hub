@@ -44,10 +44,10 @@ const Header = () => {
         </NavLink>
 
         {/* Book Hub */}
-        <div className="book-hub">
+        <NavLink to="/about" className="book-hub">
           <FontAwesomeIcon icon={faBookOpen} className="book-icon" />
           <h2>Book Hub</h2>
-        </div>
+        </NavLink>
 
         {/* Hamburger */}
         <div
