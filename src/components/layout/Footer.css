@@ -1,4 +1,3 @@
-/* Root Variables */
 :root {
   --primary-bg: #eeebfa;
   --primary-color: #333;
@@ -9,7 +8,6 @@
   --font-family: "Courier New", monospace;
 }
 
-/* Footer Base Styles */
 .footer {
   background-color: var(--primary-bg);
   color: var(--primary-color);
@@ -27,7 +25,6 @@
   gap: 30px;
 }
 
-/* Footer Branding */
 .footer-brand h3 {
   font-family: var(--font-family);
   font-size: 1.4rem;
@@ -41,7 +38,6 @@
   color: var(--text-muted);
 }
 
-/* Get In Touch Section */
 .get-in-touch {
   transition: all 0.3s ease;
   border: 1px solid var(--border-color);
@@ -98,17 +94,14 @@
   top: -100%;
 }
 
-/* Icon Style */
 .get-in-touch-arrow {
   transform: rotate(45deg);
 }
 
-/* Hover Border Effect */
 .get-in-touch:hover {
   border-color: var(--hover-border-color);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;

@@ -158,9 +158,8 @@
 
 .featured-books h2 {
   text-align: right;
-  font-size: 4rem;
+  font-size: 3rem;
   color: var(--primary-color);
-  margin-bottom: 2rem;
 }
 
 .books-grid {

@@ -5,6 +5,7 @@
   --modal-opacity: 0.9;
 }
 
+
 .header {
   position: sticky;
   top: 0;
@@ -119,7 +120,7 @@
 
 .modal-nav-links li a {
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 800;
   color: var(--text-color);
   text-decoration: none;
   transition: color 0.3s ease;

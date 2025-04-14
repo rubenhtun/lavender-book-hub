@@ -12,7 +12,7 @@ const Home = () => {
   // Fetch books when searchTerm changes
   useEffect(() => {
     const fetchBooks = async () => {
-      if (!searchTerm) return; // Skip if search term is empty
+      if (!searchTerm) return;
       setLoading(true);
       try {
         const response = await fetch(
@@ -20,7 +20,7 @@ const Home = () => {
         );
         if (!response.ok) throw new Error("Failed to fetch books");
         const data = await response.json();
-        setBooks(data.docs || []); // Set books from API, default to empty array if no results
+        setBooks(data.docs || []);
         console.log(data.docs);
       } catch (error) {
         console.error("Error fetching books:", error);
@@ -30,7 +30,7 @@ const Home = () => {
       }
     };
     fetchBooks();
-  }, [searchTerm]); // Re-run when searchTerm changes
+  }, [searchTerm]);
 
   // Handle search input change
   const handleSearch = (e) => {
