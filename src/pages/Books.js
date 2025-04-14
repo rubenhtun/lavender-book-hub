@@ -16,6 +16,7 @@ const Books = () => {
         const response = await fetch(openLibraryApiUrl);
         if (!response.ok) throw new Error("Failed to fetch books");
         const data = await response.json();
+        console.log(data.reading_log_entries);
         setBooks(data.reading_log_entries || []);
       } catch (error) {
         console.error("Error fetching books:", error);
@@ -46,8 +47,8 @@ const Books = () => {
                 </div>
                 <div className="book-info">
                   <h3>
-                    {entry.work.length > 20
-                      ? `${entry.work.slice(0, 20)}...`
+                    {entry.work.title.length > 20
+                      ? `${entry.work.title.slice(0, 20)}...`
                       : entry.work.title}
                   </h3>
                   <p className="book-author">
