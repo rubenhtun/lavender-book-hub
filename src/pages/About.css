@@ -21,6 +21,7 @@
   width: 650px;
   height: 400px;
   object-fit: cover;
+  border-radius: 50px 10px 0 0;
 }
 
 .about-details {
@@ -28,11 +29,12 @@
   position: absolute;
   top: 87%;
   left: 30%;
+  width: 65%;
   padding: 2.5rem;
   background-color: var(--accent-color);
   color: var(--text-color-dark);
+  border-bottom-right-radius: 50px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 65%;
 }
 
 .about-title {
@@ -68,7 +70,8 @@
   flex-direction: column;
   justify-content: center;
   cursor: pointer;
-  border-radius: 12px 0 0 12px;
+  transform: skewX(-10deg);
+  border-radius: 12px;
   border-left: 4px solid var(--primary-color);
 }
 
