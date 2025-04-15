@@ -16,11 +16,10 @@ const Home = () => {
       if (!searchTerm) return;
       setLoading(true);
       try {
-        const response = await fetch(
-          `${openLibraryApiUrl}${searchTerm.replace(/\s+/g, "+")}`
-        );
+        const response = await fetch(`${openLibraryApiUrl}${searchTerm}`);
         if (!response.ok) throw new Error("Failed to fetch books");
         const data = await response.json();
+        console.log(data);
         setBooks(data.docs || []);
         console.log(data.docs);
       } catch (error) {

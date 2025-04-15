@@ -11,9 +11,99 @@
   --border-color: #ccc;
 }
 
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Hero Section Animations */
+.hero-section {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.hero-title {
+  animation: slideUp 0.8s ease-out 0.2s both;
+}
+
+.hero-subtitle {
+  animation: slideUp 0.8s ease-out 0.4s both;
+}
+
+.search-bar {
+  animation: slideUp 0.8s ease-out 0.6s both;
+}
+
+.cta-button {
+  animation: slideUp 0.8s ease-out 0.8s both;
+}
+
+.hero-image {
+  animation: slideUp 0.8s ease-out 0.4s both, pulse 6s ease-in-out infinite 1.2s;
+  transform-origin: center;
+}
+
+/* Book Cards Animations */
+.book-card {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Stagger the book card animations */
+.books-grid {
+  perspective: 1000px;
+}
+
+.book-card-wrapper:nth-child(1) .book-card {
+  animation-delay: 0.1s;
+}
+.book-card-wrapper:nth-child(2) .book-card {
+  animation-delay: 0.2s;
+}
+.book-card-wrapper:nth-child(3) .book-card {
+  animation-delay: 0.3s;
+}
+.book-card-wrapper:nth-child(4) .book-card {
+  animation-delay: 0.4s;
+}
+.book-card-wrapper:nth-child(5) .book-card {
+  animation-delay: 0.5s;
+}
+.book-card-wrapper:nth-child(6) .book-card {
+  animation-delay: 0.6s;
+}
+
 /* Home Page Wrapper */
 .home-page {
-  padding: 2rem;
+  padding: 2rem 1rem;
   font-family: "Courier New", monospace;
 }
 
